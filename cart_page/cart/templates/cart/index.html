@@ -1,0 +1,127 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="{% static 'cart/css/style.css' %}">
+
+    {% if title %}
+        <title>Cart | {{ title }}</title>
+    {% else %}
+        <title>Cart</title>
+    {% endif %}
+</head>
+<body>
+
+    {# Header #}
+	<header class="header">
+		<!--Nav-->
+		<nav class="nav container">
+			<div class="logo">
+				<a href="">
+					<span>Nike</span><img src="{% static 'cart/icons/nike-logo.svg' %}" alt="Nike logo">
+				</a>
+			</div>
+
+			<!--Nav list-->
+			<div class="menu">
+				<ul class="nav-list">
+					<li class="nav-item">
+						<a href="" class="nav-link">MEN</a>
+					</li>
+					<li class="nav-item">
+						<a href="" class="nav-link">WOMEN</a>
+					</li>
+					<li class="nav-item">
+						<a href="" class="nav-link">KIDS</a>
+					</li>
+					<li class="nav-item">
+						<a href="" class="nav-link">ABOUT</a>
+					</li>
+					<li class="nav-item">
+						<a href="" class="nav-link">CONTACT</a>
+					</li>
+				</ul>
+			</div>
+			
+			<a href="" class="cart">
+				<img src="{%  static 'cart/icons/shopping-bag.svg' %}" alt="cart">
+			</a>
+
+			<div class="hamburger">
+				<img src="{%  static 'cart/icons/menu.svg' %}" alt="cart">
+			</div>
+		</nav>
+	</header>
+
+
+    {# Main #}
+	<main class="main container">
+		<div class="row">
+		    {# Nike Shoe #}
+			<div class="shoe">
+				<div class="shoe-figure"></div>
+
+				<div>
+					<img class="shoe-image" src="{%  static 'cart/images/pic1.png' %}" alt="cart">
+				</div>
+
+				<div class="dots">
+					<span class="dot dot-color-1 active"></span>
+					<span class="dot dot-color-2"></span>
+				</div>
+			</div>
+
+			<div class="info">
+		        {# Information #}
+				<div class="shoe-info">
+					<span class="info-subtitle">Nike</span>
+					<h1 class="info-title">Air Max Motion 270</h1>
+					<p class="info-description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing.
+					</p>
+				</div>
+
+				<div class="info-down">
+				    {# Size #}
+					<div class="size">
+						<h3 class="size-title">Total</h3>
+						<div class="size-content">
+							<span class="size-total active">8.6</span>
+							<span class="size-total">9</span>
+							<span class="size-total">9.5</span>
+						</div>
+					</div>
+
+					{# Count #}
+					<div class="count">
+						<h3 class="count-title">Count</h3>
+						<div class="count-content">
+							<span>-</span>
+							<span>1</span>
+							<span>+</span>
+						</div>
+					</div>
+				</div>
+
+				<!--Price-->
+				<div class="price">
+					<span class="price-title">$99.99</span>
+					<a href="" class="price-button">ADD TO CART</a>
+				</div>
+
+			</div>
+
+		</div>
+	</main>
+
+
+    {# Custom Script #}
+    <script src="{% static 'cart/js/index.js' %}"></script>
+</body>
+</html>
